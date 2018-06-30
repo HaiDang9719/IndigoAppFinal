@@ -29,7 +29,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-
 var comments = require('./routes/comments');
 app.get('/comments', comments.comments);
 
@@ -67,7 +66,16 @@ var ratings = [
     ratingTotal: 0
   }
 ];
-
+// Handling CORS errors
+app.use(function (req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Request-With, Content-Type, Accept, Authorization');
+	if (req.method === 'OPTIONS'){
+		res.header('Access-Control-Allow-Methods','PUT, POST, PATCH, DELETE, GET');
+		return res.status(200).json({});
+	}
+	next();
+});
 var commentCounts = [0, 0, 0, 0, 0, 0];
 var classTitles = ['Deep Learning with Neural Networks', 'Advanced Calculus for Scholarship Athletes', 'Data Structures and Algorithms in Python', 'Processing Big Data with Spark and Hadoop', 'Essential Mathematics for Machine Learning', 'Social Media for Career Advancement'];
 var classDescriptions = [

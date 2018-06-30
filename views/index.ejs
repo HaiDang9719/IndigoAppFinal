@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include header %>
+acs
 <body>
 	<% include navbar %>
 
 	<div class="container" style="margin-top:80px">
-		<% include content %>
-		<hr />
+		
+
+			<div class="app">
+		  
+			  <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+			  <video id="camera-stream"></video>
+			  <img id="snap">
+		  
+			  <p id="error-message"></p>
+		  
+			  <div class="controls">
+				<a href="#" id="delete-photo" title="Delete Photo" class="disabled"><span class="glyphicon glyphicon-erase"></span></a>
+				<a href="#" id="take-photo" title="Take Photo"><span class="glyphicon glyphicon-camera"></span></a>
+				<a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><span class="glyphicon glyphicon-download-alt"></span></a>  
+			  </div>
+			  
+				
+			  
+		  
+			  <!-- Hidden canvas element. Used for taking snapshot of video. -->
+			  <canvas></canvas>
+		  
+			</div>
+			
+		  
+		  
 	</div>
-	 
+	<div id="previewImage"></div>
+	<div id="previewChart" style="height: 300px; width: 110%;"></div>
 	<script src="../jquery/jquery.js"></script>	 
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	 
 </body>
 </html>
