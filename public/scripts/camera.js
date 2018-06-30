@@ -100,8 +100,20 @@ document.addEventListener('DOMContentLoaded', function () {
         var content = "abc";
         $('#previewImage').html('<ul class="list-group">' 
         + '<li class="list-group-item">Supplier <span class="badge">'+"Coopmart"+'</span></li>'
-        + '<li class="list-group-item">Expired day <span class="badge">'+"04/07/2018"+'</span></li>' 
-        + '</ul' );
+        + '<li class="list-group-item">Description <span class="badge">'+"Chocopie"+'</span></li>'
+        + '<li class="list-group-item">Expired day <span class="badge">'+"04/07/2018"+'</span></li>'
+        + '<li class="list-group-item">Country <span class="badge">'+"Vietnam"+'</span></li>');
+        // + '<li class="list-group-item">Language <span class="badge">'
+        // + '<div class="dropdown">'
+        // + '<button class="btn btn-primary dropdown-toggle"></button>'
+        // + '<ul class="dropdown-menu">'
+        // +'<li><a href="#">HTML</a></li>'
+        // +'<li><a href="#">CSS</a></li>'
+        // +'<li><a href="#">JavaScript</a></li>'
+        // +'</span></li>'
+        // + '<li class="list-group-item">Description <span class="badge">'+"04/07/2018"+'</span></li>' 
+        // + '</ul' 
+        // + '</div>');
         //+ content + ' ');
 
         var chart = new CanvasJS.Chart("previewChart", {
@@ -120,11 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 toolTipContent: "{name}: <strong>{y}%</strong>",
                 indexLabel: "{name} - {y}%",
                 dataPoints: [
-                    { y: 20, name: "School Aid", exploded: true },
-                    { y: 20, name: "Medical Aid" },
-                    { y: 20, name: "Debt/Capital" },
-                    { y: 20, name: "Elected Officials" },
-                    { y: 20, name: "University" }
+                    { y: 25, name: "FAT", exploded: true },
+                    { y: 50, name: "CARB" },
+                    { y: 15, name: "PROTEIN" },
+                    { y: 6, name: "CALCIUM" },
+                    { y: 4, name: "IRON" }
                 ]
             }]
         });
