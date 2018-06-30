@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         video.pause();
         $.ajax({
             type: "POST",
-            url: "https://anindex.pythonanywhere.com/query",
+            url: "http://anindex.pythonanywhere.com/query",
             data: snap,
             processData: false,
             headers: {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 "Content-Type": "multipart/form-data"
             }
         }).done(function (data) {
-
+                console.log("hello" + data);
         });
         var content = "abc";
         $('#previewImage').html('<ul class="list-group">' 
