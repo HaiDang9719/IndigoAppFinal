@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         video.pause();
         $.ajax({
             type: "POST",
-            url: "http://anindex.pythonanywhere.com/query",
+            url: "https://anindex.pythonanywhere.com/query",
             data: snap,
             processData: false,
             headers: {
